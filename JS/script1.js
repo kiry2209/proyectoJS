@@ -19,10 +19,9 @@ const productoC = new Producto("triciclo", 1000, 10);
 const productoD = new Producto("monopatin", 1500, 12);
 const productoE = new Producto("rollers", 2000, 7);
 
-let cantidadcompras = prompt("Por favor ingrese la cantidad de compras que va a realizar:")
-
-
 const listaProductos = [productoA, productoB, productoC, productoD, productoE] 
+
+let cantidadcompras = prompt("Por favor ingrese la cantidad de compras que va a realizar:")
 
 let nombresProductos = listaProductos.map((producto) => producto.nombre) /*se agrega esta funcion de orden superior para reemplazar a la anterior*/
     
@@ -45,7 +44,7 @@ function calculoStock(cantidad, precio, stock,){
 
 for(let i = 0; i < cantidadcompras; i++){
 
-    let compra1 = prompt("Ingrese el nombre del producto que desea comprar: \n-" + nombresprecios.join("\n-")).toLocaleLowerCase() 
+    let compra1 = prompt("Ingrese el nombre del producto que desea comprar: \n-" + nombresProductos.join("\n-")).toLocaleLowerCase() 
     let cantidad1 = prompt("Ingrese la cantidad del producto que desea comrpar")
 
     if(compra1 == "adulto"){
